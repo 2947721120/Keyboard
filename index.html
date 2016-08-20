@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Virtual Keyboard</title>
+	<title>虚拟键盘</title>
 
 	<!-- jQuery (required) & jQuery UI + theme (optional) -->
 	<link href="docs/css/jquery-ui.min.css" rel="stylesheet">
@@ -442,7 +442,7 @@ $('#inter-type').click(function(){
 
 	<div class="block">
 		<h2>
-			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">Custom: Meta Sets</span>
+			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">自定义：元集</span>
 			<img id="meta-type" class="tooltip-tipsy" title="Try out the typing extension!" src="css/images/keyboard.svg">
 		</h2>
 		<textarea id="meta"></textarea>
@@ -458,10 +458,10 @@ $('#inter-type').click(function(){
 			<h4>Script</h4>
 			<pre class="prettyprint lang-js">$('#meta')
 	.keyboard({
-		// keyboard will open showing last key set used
+		// 键盘将打开，显示最后的关键集中使用
 		resetDefault: false,
-		userClosed: true, // keyboard open until user closes with accept or cancel
-		autoAccept: true, // required for userClosed: true
+		userClosed: true, // 键盘打开，直到用户提供接受或取消关闭
+		autoAccept: true, // 用户需要关闭：真
 		layout: 'custom',
 		display: {
 			'alt'    : 'AltGr:It\'s all Greek to me',
@@ -472,8 +472,8 @@ $('#inter-type').click(function(){
 		},
 		customLayout: {
 			'default' : [
-				// Add labels using a ":" after the key's name and replace spaces with "_"
-				// without the labels this line is just 'a b c d e f g'
+			//添加使用标签一个“：”后的按键名称和空格替换“_”
+			//没有标签此行只是“A B C D E F G'
 				'a:a_letter,_that_sounds_like_"ey" b:a_bug_that_makes_honey c:is_when_I_look_around d:a_grade,_I_never_got e:is_what_girls_say_when_they_run_away_from_me f:u,_is_what_I_say_to_those_screaming_girls! g:gee,_is_that_the_end_of_my_wittiness?',
 				'{shift} {alt} {meta1} {meta2} {meta3} {meta99}',
 				'{bksp} {sp:1} {accept} {cancel}'
@@ -494,7 +494,7 @@ $('#inter-type').click(function(){
 				'{bksp} {sp:1} {accept} {cancel}'
 			],
 			'meta1' : [
-				't u v w x y z', // lower case end of alphabet
+				't u v w x y z', //字母表的小写端
 				'{shift} {alt} {meta1} {meta2} {meta3} {meta99}',
 				'{bksp} {sp:1} {accept} {cancel}'
 			],
@@ -504,7 +504,7 @@ $('#inter-type').click(function(){
 				'{bksp} {sp:1} {accept} {cancel}'
 			],
 			'meta1-alt' : [
-				'0 9 8 7 6 5 4', // numbers
+				'0 9 8 7 6 5 4', //数字
 				'{shift} {alt} {meta1} {meta2} {meta3} {meta99}',
 				'{bksp} {sp:1} {accept} {cancel}'
 			],
@@ -537,7 +537,7 @@ $('#inter-type').click(function(){
 	})
 	.addTyping();
 
-// Script - typing extension
+// 脚本 - 输入扩展
 var meta = $('#meta').getkeyboard();
 meta
 	.reveal()
@@ -555,11 +555,11 @@ meta
 		<textarea id="junk"></textarea>
 		<br>
 		<small>
-			* Use shift key - see action key sizes.<br>
-			* Use the decimal - only one allowed.<br>
-			* Toggle combo key included.<br>
-			* Type in 'ae' and other combo keys.<br>
-			* Accept content to see the callback.
+		*使用shift键 - 见行动密钥大小结果。
+*使用十进制 - 只允许一个结果
+*包括切换组合键。结果
+*键入“AE”等组合键。结果
+*接受的内容，看回调。
 		</small>
 		<div class="code ui-corner-all">
 			<h4>HTML</h4>
@@ -584,7 +584,7 @@ meta
 				'{a} {sp:1} {c} {sp:1} {s}'
 			]
 		},
-		// Added here as an example on how to add combos
+		//在这里加入有关如何添加组合为例
 		combos : {
 			'a' : { e: '\u00e6' },
 			'A' : { E: '\u00c6' }
@@ -621,11 +621,11 @@ $('#map').keyboard({
 			'{shift} {accept} {cancel}'
 		],
 		'shift' : [
-			'\u0391(A) \u0392(B) \u0393(C) \u0394(D) \u0395(E) \u0396(F) \u0397(G)', // upper case Greek
+			'\u0391(A) \u0392(B) \u0393(C) \u0394(D) \u0395(E) \u0396(F) \u0397(G)', // 大写希腊
 			'{shift} {accept} {cancel}'
 		]
 	},
-	usePreview: false // no preveiw
+	usePreview: false // 没有预览preveiw
 });</pre>
 		</div>
 	</div>
@@ -649,8 +649,8 @@ $('.hiddenInput').click(function(){
 	$('#hidden').data('keyboard').reveal();
 	return false;
 });
-// Initialize keyboard script on hidden input
-// set "position.of" to the same link as above
+//初始化键盘上输入脚本隐藏
+//“position.of”设置为相同的链路如上
 $('#hidden')
 	.keyboard({
 		layout   : 'qwerty',
@@ -666,7 +666,7 @@ $('#hidden')
 
 	<div class="block">
 		<h2>
-			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">Custom: iPad</span>
+			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">自定义：iPad</span>
 		</h2>
 		<textarea id="ipad"></textarea>
 		<br>
@@ -721,7 +721,7 @@ $('#hidden')
 
 	<div class="block">
 		<h2>
-			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">Custom: iPad email</span>
+			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">自定义邮件：iPad</span>
 		</h2>
 		<textarea id="ipad-email"></textarea>
 		<br>
@@ -777,7 +777,7 @@ $('#hidden')
 
 	<div class="block">
 		<h2>
-			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">Custom: Lockable</span>
+			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">自定义：可锁定</span>
 		</h2>
 		<input id="lockable" type="text">
 		<br>
@@ -809,8 +809,8 @@ $('#hidden')
 		]
 	},
 	css: {
-		// add dark themed class to keyboard popup
-		// to use bright svg padlock icon
+	//添加深色主题类键盘弹出
+//使用明亮的SVG挂锁图标
 		popup : 'ui-keyboard-dark-theme'
 	}
 })
