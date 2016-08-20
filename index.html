@@ -156,15 +156,15 @@ $('#text')
 
 	<div class="block">
 		<h2>
-			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">QWERTY Password</span>
-			<img id="password-opener" class="tooltip-tipsy" title="Click to open the virtual keyboard" src="css/images/keyboard.svg">
+			<span class="tooltip-tipsy" title="Click, then scroll down to see this code">键盘密码</span>
+			<img id="password-opener" class="tooltip-tipsy" title="点击打开虚拟键盘" src="css/images/keyboard.svg">
 		</h2>
 		<input id="password" type="password">
 		<br>
 		<small>
-			* Click icon to open keyboard.<br>
-			* Stay open until accept/cancel/esc.<br>
-			* Key hover disabled in this type.<br>
+			* 点击图标打开键盘.<br>
+			* 保持开放，直到 accept/cancel/esc.<br>
+			* 在这种类型的键悬停禁用.<br>
 			* Demo: Reveal letters with <a class="external" href="//jsfiddle.net/Mottie/24n8wsak/">Caret extension</a>.
 		</small>
 		<div class="code ui-corner-all">
@@ -182,7 +182,7 @@ $('#text')
 
 $('#password-opener').click(function(){
 	var kb = $('#password').getkeyboard();
-	// close the keyboard if the keyboard is visible and the button is clicked a second time
+	//关闭键盘如果键盘是可见的，单击该按钮第二次
 	if ( kb.isOpen ) {
 		kb.close();
 	} else {
@@ -209,7 +209,7 @@ $('#password-opener').click(function(){
 			<h4>Script</h4>
 			<pre class="prettyprint lang-js">$('#qwerty-mod')
 	.keyboard({
-		lockInput: true, // prevent manual keyboard entry
+		lockInput: true, // 防止手动键盘输入
 		layout: 'custom',
 		customLayout: {
 			'normal': [
@@ -229,15 +229,15 @@ $('#password-opener').click(function(){
 		}
 	})
 	.addCaret({
-		// extra class name added to the caret
-		// "ui-keyboard-caret" class is always added
+		// 额外的类的名称添加到符号
+		// "ui-keyboard-caret" 上课总是添加
 		caretClass : '',
 		// *** for future use ***
 		// data-attribute containing the character(s) next to the caret
 		charAttr   : 'data-character',
 		// # character(s) next to the caret (can be negative for RTL)
 		charIndex  : 1,
-		// caret position adjustments
+		// 插入位置的调整
 		offsetX    : 0,
 		offsetY    : 0
 	})
